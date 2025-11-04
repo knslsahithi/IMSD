@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript RegExp Object Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #output { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>JavaScript RegExp Object Example</h2>
+
+  <label>Enter a sentence:</label>
+  <input type="text" id="userInput" value="I love JavaScript and Java!">
+  <button onclick="checkPattern()">Check Pattern</button>
+
+  <div id="output"></div>
+
+  <script>
+    function checkPattern() {
+      let text = document.getElementById("userInput").value;
+
+      // Create a regular expression object
+      let regex = /java/gi; // pattern to match "java" (case-insensitive, global)
+
+      // Using RegExp methods
+      let testResult = regex.test(text);      // returns true/false
+      let execResult = regex.exec(text);      // returns match info
+      let matches = text.match(regex);        // returns all matches
+      let replaced = text.replace(regex, "Python"); // replaces matches
+
+      // Using RegExp properties
+      let source = regex.source;
+      let globalFlag = regex.global;
+      let ignoreCaseFlag = regex.ignoreCase;
+
+      // Display results
+      document.getElementById("output").innerHTML =
+        "<b>Input Text:</b> " + text + "<br>" +
+        "<b>Pattern:</b> /" + source + "/<br>" +
+        "<b>Global:</b> " + globalFlag + "<br>" +
+        "<b>Ignore Case:</b> " + ignoreCaseFlag + "<br><br>" +
+        "<b>test():</b> " + testResult + "<br>" +
+        "<b>exec():</b> " + (execResult ? execResult[0] : "No match") + "<br>" +
+        "<b>match():</b> " + matches + "<br>" +
+        "<b>replace():</b> " + replaced;
+    }
+  </script>
+</body>
+</html>

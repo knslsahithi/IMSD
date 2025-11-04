@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Thumbnail Image Gallery</title>
+     <style>
+        body {
+             font-family: Arial, sans-serif;
+             text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        } 
+        .gallery a img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery a img:hover {
+            transform: scale(1.1);
+            border-color: #666;
+        }
+     </style> 
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+    <p>Click on a thumbnail to view the full-sized image</p>
+
+    <div class="gallery">
+        <a href="C:\Users\knsls\OneDrive\Pictures\New folder\img.jpg" target="_blank">
+            <img src="C:\Users\knsls\OneDrive\Pictures\New folder\img.jpg" alt="Image 1">
+        </a>
+        <a href="C:\Users\knsls\OneDrive\Pictures\New folder\img.jpg" target="_blank">
+            <img src="C:\Users\knsls\OneDrive\Pictures\New folder\img.jpg" alt="Image 2">
+        </a>
+        <a href="C:\Users\knsls\OneDrive\Pictures\New folder\img.jpg" target="_blank">
+            <img src="C:\Users\knsls\OneDrive\Pictures\New folder\img.jpg" alt="Image 3">
+        </a>
+    </div>
+</body>
+</html>

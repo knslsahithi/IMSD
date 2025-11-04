@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TIMETABLE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #f3e5f5); /* light blue to lavender */
+            text-align: center;
+            color: #37474f; /* soft dark gray for text */
+        }
+        table {
+            border-collapse: collapse;
+            width: 95%;
+            margin: 20px auto;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #cfd8dc; /* light grey border */
+            padding: 12px;
+            text-align: center;
+            color: #455a64; /* neat grey-blue text */
+        }
+        th {
+            background-color: #bbdefb; /* soft light blue */
+            font-weight: bold;
+            color: #0d47a1; /* darker blue for headings */
+        }
+        tr:nth-child(even) td {
+            background-color: #ede7f6; /* lavender for even rows */
+        }
+        tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+        /* Day/Time column */
+        th:first-child, 
+        td:first-child {
+            background-color: #e3f2fd; /* light blue */
+            color: #1565c0; /* blue text */
+            font-weight: bold;
+        }
+        .lunch {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-weight: bold;
+            background-color: #ffe0b2; /* soft orange */
+            color: #e65100; /* muted deep orange */
+        }
+        .holiday {
+            background-color: #ffcdd2; /* soft pink */
+            font-weight: bold;
+            color: #d32f2f; /* light red */
+        }
+        h1 {
+            color: #1565c0; /* blue heading */
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Timetable</h1>
+    <table>
+        <tr>
+            <th>Day/Time</th>
+            <th>9.30 AM - 10.20 AM</th>
+            <th>10.20 AM - 11.10 AM</th>
+            <th>11.10 AM - 12.00 PM</th>
+            <th>12.00 PM - 12.50 PM</th>
+            <th>12.50 PM - 1.50 PM</th>
+            <th>1.50 PM - 2.40 PM</th>
+            <th>2.40 PM - 3.30 PM</th>
+            <th>3.30 PM - 4.20 PM</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td colspan="3">DBMS LAB</td>
+            <td>ASE</td>
+            <td rowspan="5" class="lunch">LUNCH</td>
+            <td colspan="2">TOC</td>
+            <td>DMS</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td colspan="2">CPP</td>
+            <td colspan="2">PSA</td>
+            <td>DAP</td>
+            <td>DBMS</td>
+            <td>FIP</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td colspan="2">DAP</td>
+            <td>CPP</td>
+            <td>ASE</td>
+            <td colspan="2">IMSD</td>
+            <td>TOC</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>DBMS</td>
+            <td>TOC</td>
+            <td>ASE</td>
+            <td>CPP</td>
+            <td colspan="3">Coding Lab</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td colspan="2">ISMD</td>
+            <td>DAP</td>
+            <td>DBMS</td>
+            <td colspan="2">CPP(P)</td>
+            <td>FIP</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td colspan="8" class="holiday">No Instruction Day</td>
+        </tr>
+    </table>
+</body>
+</html>

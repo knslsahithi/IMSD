@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three-Part Page Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .frame {
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #frame1 {
+            height: 30vh;
+            background-color: #f9f9f9;
+        }
+        #frame2 {
+            height: 40vh;
+            background-color: #e9f7fc;
+            overflow-y: auto;
+        }
+        #frame3 {
+            height: 30vh;
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- First Section: Image -->
+    <div id="frame1" class="frame">
+        <h3>Image Section</h3>
+        <img src="C:\Users\knsls\OneDrive\Pictures\Screenshots\R.jpg"
+    <!-- Second Section: Paragraph -->
+    <div id="frame2" class="frame">
+        <h3>Paragraph Section</h3>
+        <p>
+            This is the paragraph section of the page. It simulates a middle frame using modern HTML and CSS techniques, instead of the deprecated `<frameset>` and `<frame>` tags. You can add more content here, and the box will scroll if needed.
+        </p>
+        <p>
+            Frames were used in older HTML versions to divide a browser window into multiple sections, each capable of loading a separate HTML document. However, this approach is no longer recommended due to usability and accessibility issues. Modern web development now relies on CSS for page layout and structure.
+        </p>
+    </div>
+    <!-- Third Section: Fixed/Static Content -->
+    <div id="frame3" class="frame">
+        <h3>Fixed Section</h3>
+        <p>This is a fixed area, typically used for footers, contact information, or static content at the bottom of the page.</p>
+    </div>
+</body>
+</html>
